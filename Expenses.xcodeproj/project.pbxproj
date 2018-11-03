@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF8E3D2B218CF2E5002FBDBD /* Expenses+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E3D29218CF2E5002FBDBD /* Expenses+CoreDataClass.swift */; };
+		EF8E3D2C218CF2E5002FBDBD /* Expenses+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E3D2A218CF2E5002FBDBD /* Expenses+CoreDataProperties.swift */; };
 		FE4382E61FD0B8FD000FACCD /* ExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4382E51FD0B8FD000FACCD /* ExpensesViewController.swift */; };
 		FE4382E81FD0B917000FACCD /* SingleExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4382E71FD0B917000FACCD /* SingleExpenseViewController.swift */; };
 		FEEEA2CC1FD0B6A200D1F554 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEEA2CB1FD0B6A200D1F554 /* AppDelegate.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF8E3D29218CF2E5002FBDBD /* Expenses+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Expenses+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EF8E3D2A218CF2E5002FBDBD /* Expenses+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Expenses+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FE4382E51FD0B8FD000FACCD /* ExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesViewController.swift; sourceTree = "<group>"; };
 		FE4382E71FD0B917000FACCD /* SingleExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleExpenseViewController.swift; sourceTree = "<group>"; };
 		FEEEA2C81FD0B6A200D1F554 /* Expenses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expenses.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +105,8 @@
 		FEEEA2CA1FD0B6A200D1F554 /* Expenses */ = {
 			isa = PBXGroup;
 			children = (
+				EF8E3D29218CF2E5002FBDBD /* Expenses+CoreDataClass.swift */,
+				EF8E3D2A218CF2E5002FBDBD /* Expenses+CoreDataProperties.swift */,
 				FEEEA2CB1FD0B6A200D1F554 /* AppDelegate.swift */,
 				FE4382E51FD0B8FD000FACCD /* ExpensesViewController.swift */,
 				FE4382E71FD0B917000FACCD /* SingleExpenseViewController.swift */,
@@ -266,8 +272,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEEEA2D41FD0B6A200D1F554 /* Expenses.xcdatamodeld in Sources */,
+				EF8E3D2B218CF2E5002FBDBD /* Expenses+CoreDataClass.swift in Sources */,
 				FEEEA2CC1FD0B6A200D1F554 /* AppDelegate.swift in Sources */,
 				FE4382E61FD0B8FD000FACCD /* ExpensesViewController.swift in Sources */,
+				EF8E3D2C218CF2E5002FBDBD /* Expenses+CoreDataProperties.swift in Sources */,
 				FE4382E81FD0B917000FACCD /* SingleExpenseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,10 +447,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B76QEBSE86;
 				INFOPLIST_FILE = Expenses/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = online.techinnovator.Expenses;
+				PRODUCT_BUNDLE_IDENTIFIER = robert.Expenses;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -454,10 +463,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B76QEBSE86;
 				INFOPLIST_FILE = Expenses/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = online.techinnovator.Expenses;
+				PRODUCT_BUNDLE_IDENTIFIER = robert.Expenses;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

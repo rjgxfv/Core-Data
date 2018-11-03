@@ -7,39 +7,64 @@
 //
 
 import UIKit
+import CoreData
 
 class ExpensesViewController: UIViewController {
     
     @IBOutlet weak var expensesTableView: UITableView!
     
     let dateFormatter = DateFormatter()
-    
+    var expenses = [Expenses]()
     override func viewDidLoad() {
         super.viewDidLoad()
-
         dateFormatter.timeStyle = .long
         dateFormatter.dateStyle = .long
+        print("hello")
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        print("hello")
+        for element in expenses{
+            print("name=\(element.name!) amount=\(element.amount)")
+        }
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else{
+            return
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest: NSFetchRequest<Expenses> = Expenses.fetchRequest()
+        
+        do{
+            expenses = try managedContext.fetch(fetchRequest)
+            
+            expensesTableView.reloadData()
+        } catch{
+            print("Fetch could not be perfromed")
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     @IBAction func addNewExpense(_ sender: Any) {
-        
+        performSegue(withIdentifier: "showExpense", sender: self)
     }
 
 }
 
 extension ExpensesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return expenses.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = expensesTableView.dequeueReusableCell(withIdentifier: "expenseCell", for: indexPath)
-        
+        let expense = expenses[indexPath.row]
+        cell.textLabel?.text = expense.name
+//        if let date = expense.date{
+//            cell.detailTextLabel?.text = dateFormatter.string(from: date)
+//        }
         return cell
     }
 }
